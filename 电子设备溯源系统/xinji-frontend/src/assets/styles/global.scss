@@ -1,0 +1,83 @@
+// ==================== 芯迹 - 全局样式 ====================
+
+// 主色调
+$primary: #409EFF;
+$primary-dark: #337ECC;
+$accent: #8B5CF6;
+$success: #67C23A;
+$warning: #E6A23C;
+$danger: #F56C6C;
+
+$text-primary: #303133;
+$text-regular: #606266;
+$text-secondary: #909399;
+$border-color: #E4E7ED;
+$bg-light: #F5F7FA;
+
+// 全局重置
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: $text-primary;
+  background: linear-gradient(135deg, #f0f5ff 0%, #f5f0ff 50%, #f0f7ff 100%);
+  background-attachment: fixed;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+// 卡片样式
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(64, 158, 255, 0.08),
+              0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba(64, 158, 255, 0.12),
+                0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+}
+
+// 圆角按钮
+.xinji-btn {
+  border-radius: 10px !important;
+  font-weight: 500;
+}
+
+// 页面标题
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, $primary, $accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 24px;
+}
+
+// 时间线颜色
+.timeline-produce    { --dot-color: #409EFF; }
+.timeline-pack       { --dot-color: #8B5CF6; }
+.timeline-distribute { --dot-color: #67C23A; }
+.timeline-assemble   { --dot-color: #E6A23C; }
+.timeline-sale       { --dot-color: #F56C6C; }
+
+// 响应式
+@media (max-width: 768px) {
+  .glass-card {
+    border-radius: 12px;
+  }
+}
